@@ -13,7 +13,7 @@
 | Code                      | [https://github.com/singulostation13/singulostation](https://github.com/singulostation13/singulostation)    |
 | Wiki                      | TBD   |
 | Codedocs                  | [https://codedocs.tgstation13.org/](https://codedocs.tgstation13.org/)       |
-| /tg/station Discord       | [https://discord.gg/tsBbJFTBu9](https://discord.gg/tsBbJFTBu9) |
+| SinguloStation 13 Discord       | [https://discord.gg/tsBbJFTBu9](https://discord.gg/tsBbJFTBu9) |
 | Coderbus Discord          | [https://discord.gg/Vh8TJp9](https://discord.gg/Vh8TJp9)               |
 
 This is the codebase for SinguloStation 13, a space colony simulator based on /tg/Station 13.
