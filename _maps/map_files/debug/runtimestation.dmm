@@ -208,6 +208,10 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/engineering/gravity_generator)
+"aZ" = (
+/obj/machinery/cryopod/latejoin,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "ba" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plating,
@@ -1889,15 +1893,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/station/science)
-"pC" = (
-/obj/machinery/cryopod/latejoin,
-/obj/structure/railing,
-/obj/machinery/computer/cryopod{
-	pixel_y = -32;
-	pixel_x = 32
-	},
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "pI" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -1942,6 +1937,10 @@
 /obj/machinery/door/airlock/shell,
 /turf/open/floor/iron/dark,
 /area/station/construction)
+"sK" = (
+/obj/machinery/vending/boozeomat/all_access,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "tE" = (
 /obj/machinery/door/airlock/research,
 /turf/open/floor/iron/dark,
@@ -2081,6 +2080,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
+"Al" = (
+/obj/structure/table,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "AP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 8
@@ -2271,10 +2274,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
-"Ky" = (
-/obj/machinery/cryopod/latejoin,
-/turf/open/floor/iron,
-/area/station/hallway/secondary/entry)
 "Ly" = (
 /obj/machinery/chem_dispenser/chem_synthesizer,
 /turf/open/floor/iron/dark,
@@ -2368,6 +2367,12 @@
 /obj/effect/mapping_helpers/airalarm/unlocked,
 /turf/open/floor/iron/dark,
 /area/station/medical/chemistry)
+"Py" = (
+/obj/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "PJ" = (
 /obj/machinery/airalarm/directional/east,
 /obj/effect/mapping_helpers/airalarm/unlocked,
@@ -2439,6 +2444,10 @@
 /obj/item/bitrunning_debug,
 /turf/open/floor/iron,
 /area/station/cargo/bitrunning/den)
+"SZ" = (
+/obj/machinery/door/airlock,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "Td" = (
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/stripes/line{
@@ -5357,12 +5366,12 @@ dY
 gC
 eh
 dY
-aa
-aa
-aa
-aa
-aa
-aa
+dY
+dY
+dY
+dY
+dY
+dY
 aa
 aa
 aa
@@ -5448,13 +5457,13 @@ aa
 en
 ek
 eh
+en
+Al
+Al
+Al
+Al
+Al
 dY
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -5540,13 +5549,13 @@ dY
 dY
 ek
 eh
+en
+eh
+eh
+eh
+eh
+eh
 dY
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -5632,13 +5641,13 @@ eV
 eh
 ek
 eh
+SZ
+eh
+eh
+eh
+eh
+eh
 dY
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -5724,13 +5733,13 @@ ei
 Qi
 fZ
 eh
+en
+eh
+eh
+eh
+Py
+eh
 dY
-aa
-aa
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -5794,8 +5803,8 @@ aD
 aD
 aD
 ag
-Ky
-pC
+eh
+eh
 eh
 gu
 eh
@@ -5816,13 +5825,13 @@ eh
 rn
 eh
 eh
+en
+aZ
+aZ
+aZ
 dY
-aa
-aa
-aa
-aa
-aa
-aa
+sK
+dY
 aa
 aa
 aa
@@ -5910,11 +5919,11 @@ en
 dY
 dY
 dY
-aa
-aa
-aa
-aa
-aa
+dY
+dY
+dY
+dY
+dY
 aa
 aa
 aa
