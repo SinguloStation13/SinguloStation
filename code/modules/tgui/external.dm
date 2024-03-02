@@ -17,9 +17,6 @@
 /datum/proc/ui_interact(mob/user, datum/tgui/ui)
 	return FALSE // Not implemented.
 
-/datum/proc/ui_interact_classic(mob/user, datum/tgui/ui)
-	return FALSE // Compatibility layer for Singulo code.
-
 /**
  * public
  *

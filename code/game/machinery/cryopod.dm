@@ -94,7 +94,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	if(dir == WEST)
 		pixel_x = 32
 
-/obj/machinery/computer/cryopod/update_icon_state_classic()
+/obj/machinery/computer/cryopod/update_icon_state()
 	icon = 'icons/obj/cryogenic2.dmi'
 	if(machine_stat & (NOPOWER|BROKEN))
 		icon_state = "cellconsole"
@@ -206,7 +206,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	for (var/X in frozen_crew)
 		eject_from_storage(X)
 
-/obj/machinery/computer/cryopod/ui_interact_classic(mob/user, datum/tgui/ui)
+/obj/machinery/computer/cryopod/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "CryogenicStorage")
@@ -309,7 +309,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The display on the side reads '<b>[time_till_storage/10]</b> seconds for cryogenic storage'</span>"
 
-/obj/machinery/cryopod/RefreshPartsClassic() //If all 6 parts are upgraded to tier 4 the time_till_storage is reduced to 1 minute
+/obj/machinery/cryopod/RefreshParts() //If all 6 parts are upgraded to tier 4 the time_till_storage is reduced to 1 minute
 	time_till_storage = 5 MINUTES
 	for(var/obj/item/stock_parts/C in component_parts)
 		time_till_storage -= 10 SECONDS * C.rating
