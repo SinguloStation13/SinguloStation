@@ -68,6 +68,8 @@ In all, this is a lot like the monkey code. /N
 			apply_damage(rand(1, 3), BRUTE, affecting)
 
 /mob/living/carbon/alien/ex_act(severity, target, origin)
+	if(status_flags & GODMODE) // SinguloStation13 Edit (Cryogenic freezers change - Explosion proof if Godmode is enabled)
+		return
 	. = ..()
 	if(!. || QDELETED(src))
 		return FALSE

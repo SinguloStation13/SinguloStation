@@ -105,6 +105,9 @@
 	SHOULD_CALL_PARENT(TRUE)
 	return SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_ICON_STATE)
 
+/// Compatibility layer for Singulo code
+/atom/proc/update_icon_state_classic()
+
 /// Updates the overlays of the atom
 /atom/proc/update_overlays()
 	SHOULD_CALL_PARENT(TRUE)

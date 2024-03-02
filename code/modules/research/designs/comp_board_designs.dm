@@ -1,5 +1,16 @@
 ///////////////////Computer Boards///////////////////////////////////
 
+
+/datum/design/board/cryogenicpodcontrol
+	name = "Computer Design (Cryogenic Oversight Console)"
+	desc = "Allows for the construction of circuit boards used to build a Cryogenic Oversight Console."
+	id = "cryogenicpodcontrol"
+	build_path = /obj/item/circuitboard/computer/cryogenicpodcontrol
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+	category = list(
+		RND_CATEGORY_COMPUTER + RND_SUBCATEGORY_COMPUTER_MEDICAL
+	)
+
 /datum/design/board
 	name = "NULL ENTRY Board"
 	desc = "I promise this doesn't give you syndicate goodies!"

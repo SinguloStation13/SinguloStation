@@ -150,6 +150,9 @@
 	var/list/butcher_results = null
 	///these will always be yielded from butchering
 	var/list/guaranteed_butcher_results = null
+
+	var/player_logged = FALSE //keep track at login and logout; used for SSD
+
 	///effectiveness prob. is modified negatively by this amount; positive numbers make it more difficult, negative ones make it easier
 	var/butcher_difficulty = 0
 

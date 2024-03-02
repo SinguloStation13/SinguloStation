@@ -383,6 +383,52 @@
 		/turf/closed/mineral/gibtonite = 2,
 	)
 
+//	<Xyraeon 9b>
+
+/turf/closed/mineral/random/low_chance/xyraeon
+	turf_type = /turf/open/misc/asteroid/moon/xyraeon
+	baseturfs = /turf/open/misc/asteroid/moon/xyraeon
+	initial_gas_mix = AIRLESS_ATMOS
+	defer_change = TRUE
+	proximity_based = FALSE
+	icon_state = "rock_lowchance"
+	mineralChance = 6
+
+/turf/closed/mineral/random/low_chance/xyraeon/mineral_chances()
+	return list(
+		/obj/item/stack/ore/bluespace_crystal = 1,
+		/obj/item/stack/ore/diamond = 1,
+		/obj/item/stack/ore/gold = 4,
+		/obj/item/stack/ore/iron = 40,
+		/obj/item/stack/ore/plasma = 15,
+		/obj/item/stack/ore/silver = 6,
+		/obj/item/stack/ore/titanium = 4,
+		/obj/item/stack/ore/uranium = 2,
+		/turf/closed/mineral/gibtonite = 2,
+	)
+
+/turf/closed/mineral/random/high_chance/xyraeon
+	turf_type = /turf/open/misc/asteroid/moon/xyraeon
+	baseturfs = /turf/open/misc/asteroid/moon/xyraeon
+	initial_gas_mix = AIRLESS_ATMOS
+	defer_change = TRUE
+	icon_state = "rock_highchance"
+	mineralChance = 25
+	proximity_based = FALSE
+
+/turf/closed/mineral/random/high_chance/xyraeon/mineral_chances()
+	return list(
+		/obj/item/stack/ore/bluespace_crystal = 20,
+		/obj/item/stack/ore/diamond = 30,
+		/obj/item/stack/ore/gold = 45,
+		/obj/item/stack/ore/plasma = 50,
+		/obj/item/stack/ore/silver = 50,
+		/obj/item/stack/ore/titanium = 45,
+		/obj/item/stack/ore/uranium = 35,
+	)
+
+//	</Xyraeon 9b>
+
 //extremely low chance of rare ores, meant mostly for populating stations with large amounts of asteroid
 /turf/closed/mineral/random/stationside
 	icon_state = "rock_nochance"

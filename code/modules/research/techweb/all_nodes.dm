@@ -641,6 +641,8 @@
 		"thermomachine",
 		"w-recycler",
 		"welding_goggles",
+		"techfab_departmental_engineering", "techfab_departmental_science", "techfab_departmental_medical", "techfab_departmental_cargo", "techfab_departmental_security", "techfab_departmental_service", //Singulostation edit - Printable techfabs and protolathes
+		"protolathe_departmental_engineering", "protolathe_departmental_science", "protolathe_departmental_medical", "protolathe_departmental_cargo", "protolathe_departmental_security", "protolathe_departmental_service" //Singulostation edit - Printable techfabs and protolathes
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12500)
 	discount_experiments = list(/datum/experiment/scanning/random/material/easy = 7500)

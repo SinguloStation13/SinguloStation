@@ -777,6 +777,9 @@
 	..()
 	RefreshParts()
 
+/obj/machinery/proc/RefreshPartsClassic() //Placeholder proc for machines that are built using frames.
+	return
+
 /obj/machinery/proc/RefreshParts()
 	SHOULD_CALL_PARENT(TRUE)
 	//reset to baseline

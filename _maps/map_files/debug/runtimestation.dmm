@@ -1889,6 +1889,15 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/station/science)
+"pC" = (
+/obj/machinery/cryopod/latejoin,
+/obj/structure/railing,
+/obj/machinery/computer/cryopod{
+	pixel_y = -32;
+	pixel_x = 32
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "pI" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -2262,6 +2271,10 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
+"Ky" = (
+/obj/machinery/cryopod/latejoin,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/entry)
 "Ly" = (
 /obj/machinery/chem_dispenser/chem_synthesizer,
 /turf/open/floor/iron/dark,
@@ -5781,8 +5794,8 @@ aD
 aD
 aD
 ag
-eh
-eh
+Ky
+pC
 eh
 gu
 eh

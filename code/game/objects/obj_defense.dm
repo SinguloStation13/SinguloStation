@@ -1,3 +1,26 @@
+//Checks if the living mob having this item has Godmode
+//Returns true if yes, no otherwise
+/obj/proc/CheckGodmode()
+	var/mob/living/wielder
+	var/atom/parent = src.loc
+	var/iterations
+	for (iterations=0, iterations<10, iterations++) // 10 iterations meaning 10 nested parent checks (ID in PDA in Box in Backpack in Bag of Holding in /mob/living/)
+		if (isliving(parent))
+			break
+		if (isturf(parent))
+			return FALSE
+		if (isarea(parent))
+			return FALSE
+		if (parent.loc) // Just in case
+			parent = parent.loc
+		else
+			return FALSE
+
+	if (isliving(parent))
+		wielder = parent
+		if (wielder.status_flags & GODMODE)
+			return TRUE
+	return FALSE
 
 /obj/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
 	..()
@@ -10,6 +33,8 @@
 	. = ..() //contents explosion
 	if(QDELETED(src))
 		return TRUE
+	if (CheckGodmode()) // SinguloStation13 Edit (Cryogenic freezers change - Items worn by Godmoded mobs are immune to damage)
+		return
 	if(target == src)
 		take_damage(INFINITY, BRUTE, BOMB, 0)
 		return TRUE

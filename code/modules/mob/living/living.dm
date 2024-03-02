@@ -1891,6 +1891,9 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 		if(NAMEOF(src, lighting_cutoff))
 			sync_lighting_plane_cutoff()
 
+/mob/living/proc/isLivingSSD()
+	if(player_logged && stat != DEAD)
+		return TRUE
 
 /mob/living/vv_get_header()
 	. = ..()
