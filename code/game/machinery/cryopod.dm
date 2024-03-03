@@ -207,6 +207,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		eject_from_storage(X)
 
 /obj/machinery/computer/cryopod/ui_interact(mob/user, datum/tgui/ui)
+	. = ..()
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "CryogenicStorage")
