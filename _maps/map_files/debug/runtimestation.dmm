@@ -2369,7 +2369,8 @@
 /area/station/medical/chemistry)
 "Py" = (
 /obj/machinery/computer/cryopod{
-	pixel_x = 32
+	pixel_x = 32;
+	dir = 8
 	},
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)

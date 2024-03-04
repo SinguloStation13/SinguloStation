@@ -13,6 +13,10 @@ Format:
 	votable (is this map votable)
 endmap
 
-map runtimestation
+map xyraeon-9b
 	default
 endmap
+
+#map runtimestation
+#	default
+#endmap
