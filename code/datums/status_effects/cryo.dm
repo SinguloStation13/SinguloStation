@@ -16,7 +16,9 @@
 	alert_type = /atom/movable/screen/alert/status_effect/cryo_protection
 
 /datum/status_effect/cryo_protection/on_apply()
-	owner.PermaSleeping()
+	owner.PermaCryoSleeping()
+	owner.apply_status_effect(STASIS_MACHINE_EFFECT)
+	owner.extinguish_mob()
 	owner.status_flags |= GODMODE
 	if(ishuman(owner))
 		owner.reagents.clear_reagents()
@@ -38,9 +40,9 @@
 	owner.status_flags &= ~GODMODE
 	if(isliving(owner))
 		if (iscarbon(owner))
-			owner.SetSleeping(5 SECONDS)
+			owner.SetCryoSleeping(5 SECONDS)
 		else
-			owner.SetSleeping(0 SECONDS)
+			owner.SetCryoSleeping(0 SECONDS)
 
 	REMOVE_TRAIT(owner, TRAIT_PACIFISM, /datum/status_effect/cryo_protection)
 	owner.visible_message("<span class='notice'>[owner] emerges from cryogenetic freeze, waking from his slumber.</span>")

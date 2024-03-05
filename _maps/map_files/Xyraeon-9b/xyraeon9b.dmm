@@ -164,6 +164,18 @@
 /obj/effect/turf_decal/lunar_sand/plating,
 /turf/open/floor/plating/airless,
 /area/xyraeon/surface)
+"fS" = (
+/obj/effect/turf_decal/trimline/white/filled/line{
+	color = "#065C93";
+	dir = 4
+	},
+/mob/living/basic/parrot/poly{
+	name = "Singuloth"
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 8
+	},
+/area/station/sss_pioneer)
 "fY" = (
 /obj/structure/railing{
 	dir = 8
@@ -529,6 +541,11 @@
 	},
 /turf/open/floor/plating/airless,
 /area/station/ai_monitored/command/nuke_storage)
+"qz" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/drone_dispenser/classic,
+/turf/open/floor/plating,
+/area/xyraeon/surface)
 "qA" = (
 /obj/structure/railing{
 	dir = 4
@@ -548,6 +565,10 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/engineering/main)
+"rs" = (
+/obj/effect/landmark/blobstart,
+/turf/open/openspace/airless/planetary,
+/area/xyraeon/surface)
 "so" = (
 /obj/effect/turf_decal/stripes{
 	dir = 4
@@ -558,6 +579,11 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
+"sw" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/effect/mapping_helpers/airlock/locked,
+/turf/open/floor/plating,
+/area/xyraeon/surface)
 "sA" = (
 /obj/machinery/light/broken/directional/west,
 /turf/open/floor/mineral/plastitanium,
@@ -567,6 +593,17 @@
 	dir = 8
 	},
 /turf/open/floor/plating/airless,
+/area/station/sss_pioneer)
+"sI" = (
+/obj/structure/rack,
+/obj/item/stamp/head/captain,
+/obj/item/stamp/head/ce,
+/obj/item/stamp/head/cmo,
+/obj/item/stamp/head/hop,
+/obj/item/stamp/head/hos,
+/obj/item/stamp/head/qm,
+/obj/item/stamp/head/rd,
+/turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
 "sJ" = (
 /obj/machinery/power/shuttle_engine/propulsion{
@@ -779,6 +816,17 @@
 	dir = 4
 	},
 /area/station/engineering/main)
+"xr" = (
+/obj/effect/turf_decal/trimline/white/filled/line{
+	color = "#065C93";
+	dir = 4
+	},
+/mob/living/basic/pet/dog/corgi/ian,
+/obj/structure/bed/dogbed/ian,
+/turf/open/floor/iron/dark/side{
+	dir = 8
+	},
+/area/station/sss_pioneer)
 "xw" = (
 /obj/structure/lattice,
 /turf/open/openspace/airless/planetary,
@@ -853,6 +901,11 @@
 /obj/structure/cable,
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
+"yO" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/xyraeon/surface)
 "yS" = (
 /turf/closed/mineral/random/low_chance/xyraeon,
 /area/xyraeon/underground)
@@ -1001,10 +1054,8 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/engineering/main)
 "DW" = (
-/obj/machinery/door/airlock/engineering/glass,
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/r_wall,
-/area/station/engineering/main)
+/area/xyraeon/surface)
 "EE" = (
 /obj/machinery/light/broken/directional/south,
 /obj/machinery/vending/coffee,
@@ -1053,6 +1104,11 @@
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
+"Gk" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/xyraeon/surface)
 "Gx" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/mineral/plastitanium,
@@ -1278,11 +1334,10 @@
 /turf/open/floor/iron/dark/textured/airless,
 /area/xyraeon/surface)
 "MB" = (
-/obj/structure/grille,
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/cable,
+/obj/effect/spawner/structure/electrified_grille,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "MN" = (
@@ -1601,6 +1656,15 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/iron/smooth,
 /area/station/engineering/main)
+"UC" = (
+/obj/item/circuitboard/computer/engineering_orders,
+/obj/item/circuitboard/computer/medical_orders,
+/obj/item/circuitboard/computer/science_orders,
+/obj/item/circuitboard/computer/security_orders,
+/obj/item/circuitboard/computer/service_orders,
+/obj/structure/rack,
+/turf/open/floor/mineral/plastitanium,
+/area/station/sss_pioneer)
 "UI" = (
 /obj/structure/railing{
 	dir = 8
@@ -1657,6 +1721,12 @@
 /obj/item/mecha_parts/mecha_equipment/orebox_manager,
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
+"WW" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/ghost_role/drone/classic,
+/turf/open/floor/plating,
+/area/xyraeon/surface)
 "WY" = (
 /obj/item/stack/rods,
 /obj/effect/mapping_helpers/broken_floor,
@@ -1736,6 +1806,12 @@
 /obj/machinery/vending/tool,
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
+"YX" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/carbon/human/species/monkey/punpun,
+/obj/structure/chair/office,
+/turf/open/floor/iron/smooth,
+/area/station/engineering/main)
 "Zq" = (
 /obj/machinery/light/broken/directional/south,
 /obj/machinery/vending/snack/green,
@@ -185449,7 +185525,7 @@ Vh
 Vh
 xQ
 xQ
-DW
+Dq
 xQ
 xQ
 kX
@@ -185965,7 +186041,7 @@ xQ
 kX
 kX
 OI
-xQ
+ZK
 kX
 eU
 oB
@@ -186220,9 +186296,9 @@ Vh
 Vh
 xQ
 kX
-kX
+YX
 XX
-xQ
+ZK
 kX
 eU
 oB
@@ -186479,7 +186555,7 @@ xQ
 kX
 kX
 OI
-xQ
+ZK
 kX
 eU
 oB
@@ -187259,10 +187335,10 @@ kX
 kX
 kX
 xQ
-Vh
-Vh
-Vh
-Vh
+qz
+yO
+yO
+DW
 Vh
 Vh
 Vh
@@ -187516,10 +187592,10 @@ kX
 kX
 TZ
 xQ
-Vh
-Vh
-Vh
-Vh
+WW
+Gk
+Gk
+sw
 Vh
 Vh
 Vh
@@ -187773,10 +187849,10 @@ MB
 xQ
 xQ
 xQ
-Vh
-Vh
-Vh
-Vh
+Gk
+DW
+DW
+DW
 Vh
 Vh
 Vh
@@ -188028,10 +188104,10 @@ yl
 yl
 yl
 xQ
-Vh
-Vh
-Vh
-Vh
+yO
+yO
+Gk
+DW
 Vh
 Vh
 Vh
@@ -188284,11 +188360,11 @@ GT
 GT
 GT
 GT
-xQ
-Vh
-Vh
-Vh
-Vh
+GT
+Gk
+Gk
+Gk
+DW
 Vh
 Vh
 Vh
@@ -188542,10 +188618,10 @@ xQ
 xQ
 xQ
 xQ
-Vh
-Vh
-Vh
-Vh
+DW
+DW
+DW
+DW
 Vh
 ax
 Vh
@@ -211343,7 +211419,7 @@ tn
 tn
 tn
 tn
-tn
+rs
 tn
 tn
 tn
@@ -219686,7 +219762,7 @@ tn
 tn
 tn
 tn
-tn
+rs
 tn
 tn
 tn
@@ -221563,7 +221639,7 @@ tn
 tn
 tn
 tn
-tn
+rs
 tn
 tn
 tn
@@ -228847,7 +228923,7 @@ tn
 tn
 tn
 tn
-tn
+rs
 tn
 tn
 tn
@@ -242145,9 +242221,9 @@ Hk
 pE
 NS
 UO
-UO
+UC
 pE
-UO
+sI
 UO
 ON
 pE
@@ -246513,11 +246589,11 @@ tn
 tn
 Hk
 yp
+fS
 Bv
 Bv
 Bv
-Bv
-Bv
+xr
 yp
 Hk
 tn
@@ -251988,7 +252064,7 @@ tn
 tn
 tn
 tn
-tn
+rs
 tn
 tn
 tn
@@ -256264,7 +256340,7 @@ tn
 tn
 tn
 tn
-tn
+rs
 tn
 tn
 tn

@@ -95,6 +95,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		pixel_x = 32
 
 /obj/machinery/computer/cryopod/update_icon_state()
+	. = ..()
 	icon = 'icons/obj/cryogenic2.dmi'
 	if(machine_stat & (NOPOWER|BROKEN))
 		icon_state = "cellconsole"
@@ -311,6 +312,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		. += "<span class='notice'>The display on the side reads '<b>[time_till_storage/10]</b> seconds for cryogenic storage'</span>"
 
 /obj/machinery/cryopod/RefreshParts() //If all 6 parts are upgraded to tier 4 the time_till_storage is reduced to 1 minute
+	. = ..()
 	time_till_storage = 5 MINUTES
 	for(var/obj/item/stock_parts/C in component_parts)
 		time_till_storage -= 10 SECONDS * C.rating

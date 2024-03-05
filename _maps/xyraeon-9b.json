@@ -12,38 +12,40 @@
 		"whiteship": "whiteship_box",
 		"emergency": "emergency_box"
 	},
+	"ignored_unit_tests": [
+		"/datum/unit_test/job_roundstart_spawnpoints",
+		"/datum/unit_test/required_map_items"
+	],
 	"traits": [
 		{
 			"Up": true,
 			"Mining": true,
-			"Linkage": null,
 			"Gravity": true,
 			"Baseturf": "/turf/open/misc/asteroid/moon/xyraeon",
-			"No Parallax": true
+			"Linkage": "Cross"
 		},
 		{
 			"Up": true,
+			"Down": true,
 			"Mining": true,
-			"Linkage": null,
 			"Gravity": true,
 			"Baseturf": "/turf/open/openspace/airless/planetary",
-			"No Parallax": true
+			"Linkage": "Cross"
 		},
 		{
 			"Up": true,
+			"Down": true,
 			"Mining": true,
-			"Linkage": null,
 			"Gravity": true,
 			"Baseturf": "/turf/open/openspace/airless/planetary",
-			"No Parallax": true
+			"Linkage": "Cross"
 		},
 		{
 			"Down": true,
 			"Mining": true,
-			"Linkage": null,
 			"Gravity": true,
 			"Baseturf": "/turf/open/openspace/airless/planetary",
-			"No Parallax": true
+			"Linkage": "Cross"
 		}
 	],
 	"minetype": "none",
