@@ -35,8 +35,7 @@
 #define RWINDOW_BARS_CUT 4
 #define RWINDOW_POPPED 5
 #define RWINDOW_BOLTS_OUT 6
-#define RWINDOW_BOLTS_HEATED 7
-#define RWINDOW_SECURE 8
+#define RWINDOW_SECURE 7
 
 //tram structure construction states
 #define TRAM_OUT_OF_FRAME 0
