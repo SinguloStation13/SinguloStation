@@ -22,30 +22,30 @@
 			"Mining": true,
 			"Gravity": true,
 			"Baseturf": "/turf/open/misc/asteroid/moon/xyraeon",
-			"Linkage": "Cross"
+			"Linkage": null
 		},
 		{
 			"Up": true,
 			"Down": true,
 			"Mining": true,
 			"Gravity": true,
-			"Baseturf": "/turf/open/openspace/airless/planetary",
-			"Linkage": "Cross"
+			"Baseturf": "/turf/open/openspace/xyraeon",
+			"Linkage": null
 		},
 		{
 			"Up": true,
 			"Down": true,
 			"Mining": true,
 			"Gravity": true,
-			"Baseturf": "/turf/open/openspace/airless/planetary",
-			"Linkage": "Cross"
+			"Baseturf": "/turf/open/openspace/xyraeon",
+			"Linkage": null
 		},
 		{
 			"Down": true,
 			"Mining": true,
 			"Gravity": true,
-			"Baseturf": "/turf/open/openspace/airless/planetary",
-			"Linkage": "Cross"
+			"Baseturf": "/turf/open/openspace/xyraeon",
+			"Linkage": null
 		}
 	],
 	"minetype": "none",

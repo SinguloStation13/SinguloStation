@@ -364,7 +364,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	icon_state = "cryopod"
 
-/obj/machinery/cryopod/open_machine()
+/obj/machinery/cryopod/open_machine(drop = TRUE, density_to_set = FALSE)
 	..()
 	icon_state = "cryopod-open"
 	density = TRUE

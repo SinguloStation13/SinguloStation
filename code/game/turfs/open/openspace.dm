@@ -181,6 +181,18 @@
 	/// If true mineral turfs below this openspace turf will be mined automatically
 	var/drill_below = TRUE
 
+/turf/open/openspace/xyraeon
+	name = "open space"
+	baseturfs = /turf/open/openspace/icemoon
+	initial_gas_mix = AIRLESS_ATMOS
+	planetary_atmos = TRUE
+	/// Replaces itself with replacement_turf if the turf has the no ruins allowed flag (usually ruins themselves)
+	var/protect_ruin = TRUE
+	/// The turf that will replace this one if the turf below has the no ruins allowed flag. we use this one so we don't get any potential double whammies
+	var/replacement_turf = /turf/open/misc/asteroid/moon/xyraeon
+	/// If true mineral turfs below this openspace turf will be mined automatically
+	var/drill_below = TRUE
+
 /turf/open/openspace/icemoon/Initialize(mapload)
 	. = ..()
 	var/turf/T = GET_TURF_BELOW(src)
