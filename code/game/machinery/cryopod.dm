@@ -370,7 +370,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			return
 		var/mob/living/mob_occupant = occupant
 		if(mob_occupant && mob_occupant.stat != DEAD)
-			say("Cryogenic storage in <b>[time_till_storage/10]</b> seconds.")
+			say("Cryogenic storage in [time_till_storage/10] seconds.")
 			storage_world_time = world.time + time_till_storage
 			name = initial(name) + " ([mob_occupant.real_name])"
 			to_chat(mob_occupant, "<span class='boldnotice'>You do not need to ghost!</span>")

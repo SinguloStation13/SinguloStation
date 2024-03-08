@@ -23,12 +23,11 @@
 	if(ishuman(owner))
 		owner.reagents.clear_reagents()
 	ADD_TRAIT(owner, TRAIT_PACIFISM, /datum/status_effect/cryo_protection)
-	to_chat(owner,"<span class='warning'>You feel yourself rapidly entering cryogenetic freeze. It seems that nothing will be able to harm you within.")
+	to_chat(owner,"<span class='warning'>You feel yourself rapidly entering cryostasis. It seems that nothing will be able to harm you within.")
 	return ..()
 
-//Copy pasted effects from on_apply since i don't wanna do tick() in on_apply and risk some sub-shenanigens happening
+//Copy pasted effects from on_apply since i don't wanna do tick() in on_apply and risk some sub-shenanigans happening
 /datum/status_effect/cryo_protection/tick()
-	owner.PermaSleeping()
 	//owner.status_flags |= GODMODE //In case any item/ status effects wearing off while in cryogenetic freeze causes GODMODE to disable.
 	if(ishuman(owner))
 		owner.reagents.clear_reagents() //Don't want smoke grenades or other shit doing stuff on the inhabitants
@@ -39,11 +38,8 @@
 /datum/status_effect/cryo_protection/on_remove()
 	owner.status_flags &= ~GODMODE
 	if(isliving(owner))
-		if (iscarbon(owner))
-			owner.SetCryoSleeping(5 SECONDS)
-		else
-			owner.SetCryoSleeping(0 SECONDS)
+		owner.SetCryoSleeping(0 SECONDS)
 
 	REMOVE_TRAIT(owner, TRAIT_PACIFISM, /datum/status_effect/cryo_protection)
-	owner.visible_message("<span class='notice'>[owner] emerges from cryogenetic freeze, waking from his slumber.</span>")
-	to_chat(owner, "<span class='warning'>You emerge from your cryogenetic slumber. You no longer feel protected.</span>")
+	owner.visible_message("<span class='notice'>[owner] emerges from cryogenic freeze, waking from his slumber.</span>")
+	to_chat(owner, "<span class='warning'>You emerge from your cryogenic slumber. You no longer feel protected.</span>")

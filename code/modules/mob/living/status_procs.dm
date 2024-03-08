@@ -448,42 +448,16 @@
 /////////////////////////////////// SSD SLEEPING ////////////////////////////////////
 // Puts you to sleep with a status effect distinct from normal sleeping to avoid collision
 
-/mob/living/proc/IsSSDSleeping() //If we're asleep SSD
-	return has_status_effect(STATUS_EFFECT_SSD_SLEEPING)
-
-/mob/living/proc/SetSSDSleeping(amount) //Sets remaining duration
-	SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SSD_SLEEP, amount)
-	var/datum/status_effect/incapacitating/sleeping/ssd/S = IsSSDSleeping()
-	if(amount <= 0)
-		if(S)
-			qdel(S)
-	else if(S)
-		S.duration = world.time + amount
-	else
-		S = apply_status_effect(STATUS_EFFECT_SSD_SLEEPING, amount)
-	return S
-
-///Allows us to set a permanent SSD sleep on a player (use with caution and remember to unset it with SetSSDSleeping() after the effect is over)
-/mob/living/proc/PermaSSDSleeping()
-	SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SSD_SLEEP, -1)
-	var/datum/status_effect/incapacitating/sleeping/ssd/S = IsSSDSleeping()
-	if(S)
-		S.duration = -1
-	else
-		S = apply_status_effect(STATUS_EFFECT_SSD_SLEEPING, -1)
-	return S
-
-///Allows us to set a permanent sleep on a player (use with caution and remember to unset it with SetSleeping() after the effect is over)
-/mob/living/proc/PermaSleeping()
-	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, -1) & COMPONENT_NO_STUN)
+/mob/living/proc/AdjustCryoSleeping(amount) //Adds to remaining duration
+	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, amount) & COMPONENT_NO_STUN)
 		return
 	if(status_flags & GODMODE)
 		return
 	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
 	if(S)
-		S.duration = -1
-	else
-		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, -1)
+		S.duration += amount
+	else if(amount > 0)
+		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
 	return S
 
 ///////////////////////// CLEAR STATUS /////////////////////////
@@ -495,6 +469,7 @@
 	AdjustSleeping(-100)
 	AdjustParalyzed(-60)
 	AdjustImmobilized(-60)
+	AdjustCryoSleeping(-100)
 
 ///////////////////////////////// FROZEN /////////////////////////////////////
 
