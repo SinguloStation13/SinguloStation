@@ -340,7 +340,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	SSjob.latejoin_trackers -= src
 	. = ..()
 
-/obj/machinery/cryopod/close_machine(atom/movable/target, mob/user, exiting = FALSE)
+/obj/machinery/cryopod/close_machine(atom/movable/target, density_to_set = TRUE, mob/user, exiting = FALSE)
 	active = !exiting //If we exit, don't immediately try to put us into cryo thanks.
 	if(!check_control_computer(TRUE)) //Unusable control computer
 		return
