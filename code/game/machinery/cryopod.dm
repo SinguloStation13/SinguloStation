@@ -1,13 +1,6 @@
-/*
- * Cryogenic refrigeration unit.
- * Stealing a lot of concepts/code from sleepers due to massive laziness.
- * The despawn tick will only fire if it's been more than time_till_storage ticks
- * since time_entered, which is world.time when the occupant moves in.
- * ~ Zuhayr
- */
-
- //ORIGINAL FILE belonging to the WaspStation codebase. waspstation/code/game/machinery/cryopod.dm
- //Major alterations in cryopod.dm by SinguloStation13 prompting relocation
+// Cryogenic refrigeration unit.
+//ORIGINAL FILE belonging to the WaspStation codebase. waspstation/code/game/machinery/cryopod.dm
+//Major alterations in cryopod.dm by SinguloStation13 prompting relocation
 
 GLOBAL_LIST_EMPTY(cryopod_computers)
 
@@ -49,7 +42,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	build_path = /obj/machinery/computer/cryopod
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
 
-/obj/machinery/computer/cryopod/Initialize()
+/obj/machinery/computer/cryopod/Initialize(mapload)
 	. = ..()
 	GLOB.cryopod_computers += src
 
@@ -121,22 +114,18 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			break
 	update_icon_state()
 
-/*public
- *
- *Checks and updates on the availability of linked cryopods.
- *Cryopods missing go off the list.
- */
+// Checks and updates on the availability of linked cryopods.
+// Cryopods missing go off the list.
+
 /obj/machinery/computer/cryopod/proc/check_cryopods()
 	for(var/X in cryopods)
 		if(!X)
 			cryopods -= X
 
-/*public
- *
- *Compares all contents of the mob being moved to cryo against highlighted_items and unhighlighted_items.
- *If a highlighted item is within the mob, return TRUE, otherwise FALSE
- */
-/obj/machinery/computer/cryopod/proc/has_highlighted_items(var/mob/living/O, var/announce = FALSE)
+// Compares all contents of the mob being moved to cryo against highlighted_items and unhighlighted_items.
+// If a highlighted item is within the mob, return TRUE, otherwise FALSE
+
+/obj/machinery/computer/cryopod/proc/has_highlighted_items(mob/living/O, announce = FALSE)
 	var/mob/living/mob_occupant = O
 	if (issilicon(mob_occupant))
 		return FALSE //We let borgos cryo without checks since noone really plays them right now
@@ -166,14 +155,13 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	else
 		return FALSE //Occupant is clean of blacklisted items
 
-/*public
- *
- *Ejects the Mob specified in the parameter from the cryogenic console
- *First tries to find an available cryopod to insert the Mob into
- *If that fails, picks a random cryopod and awkwardly just teleports it onto it's turf
- *As a last resort, if no cryopods exist, eject onto the same turf as the cryopod console itself
- *Return is TRUE if successfully ejects, FALSE otherwise
- */
+
+// Ejects the Mob specified in the parameter from the cryogenic console
+// First tries to find an available cryopod to insert the Mob into
+// If that fails, picks a random cryopod and awkwardly just teleports it onto it's turf
+// As a last resort, if no cryopods exist, eject onto the same turf as the cryopod console itself
+// Return is TRUE if successfully ejects, FALSE otherwise
+
 /obj/machinery/computer/cryopod/proc/eject_from_storage(mob/living/M)
 	check_cryopods()
 	for (var/mob/living/O in frozen_crew) //We do another check just in case
@@ -199,10 +187,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			return TRUE
 	return FALSE
 
-/*public
- *
- *Ejects everyone from cryogenic storage
- */
+// Ejects everyone from cryogenic storage
 /obj/machinery/computer/cryopod/proc/eject_all_from_storage()
 	for (var/X in frozen_crew)
 		eject_from_storage(X)
@@ -276,7 +261,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	// 5 minutes-ish safe period before being despawned.
 	var/time_till_storage = 5 MINUTES // This is reduced to 30 seconds if a player manually enters cryo
-	var/storage_world_time = null   // Used to keep track of the safe period.
+	var/storage_world_time = null // Used to keep track of the safe period.
 
 	var/obj/machinery/computer/cryopod/control_computer
 	var/last_no_computer_message = 0
@@ -292,7 +277,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		/obj/item/stock_parts/micro_laser = 3,
 		/obj/item/stack/sheet/glass = 2)
 
-/obj/machinery/cryopod/Initialize()
+/obj/machinery/cryopod/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD //Gotta populate the cryopod computer GLOB first
 
@@ -317,10 +302,10 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	for(var/obj/item/stock_parts/C in component_parts)
 		time_till_storage -= 10 SECONDS * C.rating
 
-//Searches for a control computer and links it.
-//Checks whether the linked control computer is functional
-//Returns TRUE is the
-/obj/machinery/cryopod/proc/check_control_computer(var/announce = FALSE)
+// Searches for a control computer and links it.
+// Checks whether the linked control computer is functional
+// Returns TRUE is the
+/obj/machinery/cryopod/proc/check_control_computer(announce = FALSE)
 	if(control_computer) //we got a linked one
 		if(machine_stat & (NOPOWER|BROKEN)) //It's unusable right now.
 			if(announce)
@@ -347,7 +332,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	if(icon_state == "cryopod-open") //Don't stack people inside cryopods
 		close_machine(M, TRUE)
 
-/obj/machinery/cryopod/latejoin/Initialize()
+/obj/machinery/cryopod/latejoin/Initialize(mapload)
 	. = ..()
 	new /obj/effect/landmark/latejoin(src)
 
