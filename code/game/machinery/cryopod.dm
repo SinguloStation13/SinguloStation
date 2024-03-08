@@ -21,7 +21,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/list/frozen_crew = list()
 	//All cryopods linked to the oversight console
 	var/list/cryopods = list()
-
+	icon_keyboard = null
 	var/storage_type = "crewmembers"
 	var/storage_name = "Cryogenic Oversight Control"
 	var/highlighted_item_inside = FALSE

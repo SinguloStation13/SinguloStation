@@ -358,6 +358,10 @@
 /obj/structure/cable/multilayer/multiz,
 /turf/open/floor/plating,
 /area/station/engineering/main)
+"kE" = (
+/obj/effect/landmark/carpspawn,
+/turf/open/misc/asteroid/moon/xyraeon,
+/area/xyraeon/surface)
 "kL" = (
 /turf/closed/indestructible/riveted{
 	desc = "A wall impregnated with Fixium, able to withstand massive explosions with ease";
@@ -138998,7 +139002,7 @@ Vh
 Vh
 Vh
 Vh
-Vh
+kE
 Vh
 Vh
 Vh
@@ -151483,7 +151487,7 @@ Vh
 Vh
 Vh
 Vh
-Vh
+kE
 Vh
 Vh
 Vh
@@ -188199,7 +188203,7 @@ Vh
 Vh
 Vh
 Vh
-Vh
+kE
 Vh
 Vh
 Vh
@@ -194275,7 +194279,7 @@ Vh
 Vh
 Vh
 Vh
-Vh
+kE
 Vh
 Vh
 Vh
