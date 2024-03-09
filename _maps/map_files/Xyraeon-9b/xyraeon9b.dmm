@@ -1003,6 +1003,10 @@
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating,
 /area/station/engineering/main)
+"Cg" = (
+/obj/effect/landmark/atmospheric_sanity/ignore_area,
+/turf/open/openspace/xyraeon,
+/area/xyraeon/surface)
 "Cm" = (
 /obj/machinery/power/port_gen/pacman/super,
 /obj/effect/turf_decal/stripes/full,
@@ -1030,6 +1034,7 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/mapping_helpers/apc/no_charge,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "Dq" = (
@@ -1053,6 +1058,12 @@
 /obj/structure/fake_stairs/directional/north,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/engineering/main)
+"DU" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/generic_maintenance_landmark,
+/turf/open/floor/plating,
+/area/station/engineering/main)
 "EE" = (
 /obj/machinery/light/broken/directional/south,
 /obj/machinery/vending/coffee,
@@ -1064,7 +1075,7 @@
 /area/station/sss_pioneer)
 "EU" = (
 /obj/item/nuke_core/supermatter_sliver,
-/turf/open/misc/asteroid/moon/xyraeon,
+/turf/open/misc/asteroid/moon,
 /area/xyraeon/underground)
 "Fd" = (
 /obj/effect/turf_decal/lunar_sand,
@@ -1469,6 +1480,9 @@
 /obj/effect/turf_decal/lunar_sand/plating,
 /turf/open/floor/plating/airless,
 /area/xyraeon/surface)
+"OM" = (
+/turf/open/misc/asteroid/moon,
+/area/xyraeon/underground)
 "ON" = (
 /obj/item/circuitboard/machine/protolathe/department/cargo,
 /obj/item/circuitboard/machine/protolathe/department/cargo,
@@ -1479,6 +1493,11 @@
 /obj/machinery/light/broken/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
+"OO" = (
+/obj/structure/lattice/catwalk,
+/obj/effect/landmark/generic_maintenance_landmark,
+/turf/open/floor/plating/airless,
+/area/station/ai_monitored/command/nuke_storage)
 "OP" = (
 /obj/structure/railing/corner{
 	dir = 4
@@ -54748,9 +54767,9 @@ yS
 yS
 yS
 yS
-Iq
-Iq
-Iq
+OM
+OM
+OM
 yS
 yS
 yS
@@ -55004,11 +55023,11 @@ yS
 yS
 yS
 yS
-Iq
-Iq
-Iq
-Iq
-Iq
+OM
+OM
+OM
+OM
+OM
 yS
 yS
 yS
@@ -55261,11 +55280,11 @@ yS
 yS
 yS
 yS
-Iq
-Iq
+OM
+OM
 EU
-Iq
-Iq
+OM
+OM
 yS
 yS
 yS
@@ -55518,11 +55537,11 @@ yS
 yS
 yS
 yS
-Iq
-Iq
-Iq
-Iq
-Iq
+OM
+OM
+OM
+OM
+OM
 yS
 yS
 yS
@@ -55777,8 +55796,8 @@ yS
 yS
 yS
 yS
-Iq
-Iq
+OM
+OM
 yS
 yS
 yS
@@ -165971,7 +165990,7 @@ ma
 ma
 ma
 ma
-ma
+OO
 Yu
 Yu
 LN
@@ -166995,7 +167014,7 @@ tn
 FB
 Yu
 Yu
-ma
+OO
 ma
 ma
 ma
@@ -188396,7 +188415,7 @@ GT
 GT
 GT
 GT
-GT
+DU
 xQ
 Vh
 Vh
@@ -198762,7 +198781,7 @@ tn
 "}
 (2,1,4) = {"
 tn
-tn
+Cg
 tn
 tn
 tn

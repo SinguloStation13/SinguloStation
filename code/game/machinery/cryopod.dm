@@ -46,6 +46,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 /obj/machinery/computer/cryopod/Initialize(mapload)
 	. = ..()
 	GLOB.cryopod_computers += src
+	return INITIALIZE_HINT_NORMAL
 
 /obj/machinery/computer/cryopod/Destroy()
 	GLOB.cryopod_computers -= src
