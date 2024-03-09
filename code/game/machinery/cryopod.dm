@@ -22,6 +22,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	//All cryopods linked to the oversight console
 	var/list/cryopods = list()
 	icon_keyboard = null
+	icon_screen = null
 	var/storage_type = "crewmembers"
 	var/storage_name = "Cryogenic Oversight Control"
 	var/highlighted_item_inside = FALSE
@@ -38,7 +39,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 	)
 /obj/item/circuitboard/computer/cryogenicpodcontrol
-	name = "Circuit board (Cryogenic Oversight Console)"
+	name = "Cryogenic Oversight Console"
 	build_path = /obj/machinery/computer/cryopod
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
 
@@ -267,9 +268,9 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/last_no_computer_message = 0
 
 /obj/item/circuitboard/machine/cryogenicpod
-	name = "Cryogenic freezer (Machine Board)"
-	icon_state = "engineering"
+	name = "Cryogenic Freezer"
 	build_path = /obj/machinery/cryopod
+	greyscale_colors = CIRCUIT_COLOR_MEDICAL
 	req_components = list(
 		/obj/item/stack/ore/bluespace_crystal = 1,
 		/obj/item/stock_parts/matter_bin = 1,
