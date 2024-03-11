@@ -383,7 +383,7 @@
 		/turf/closed/mineral/gibtonite = 2,
 	)
 
-//	<Xyraeon 9b>
+// <Xyraeon 9b>
 
 /turf/closed/mineral/random/low_chance/xyraeon
 	turf_type = /turf/open/misc/asteroid/moon/xyraeon
