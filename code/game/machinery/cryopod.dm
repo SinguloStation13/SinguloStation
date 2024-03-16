@@ -60,10 +60,10 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			eject_from_storage(L)
 
 	if (frozen_crew.len != 0)
-		flags_1 |= NODECONSTRUCT_1 //Don't deconstruct terminals with people in em
+		obj_flags |= NO_DECONSTRUCTION //Don't deconstruct terminals with people in em
 		resistance_flags |= INDESTRUCTIBLE //Don't destroy terminals with people in em. Supposed to be a safe place to SSD
 	else
-		flags_1 &= ~NODECONSTRUCT_1
+		obj_flags &= ~NO_DECONSTRUCTION
 		resistance_flags &= ~INDESTRUCTIBLE
 
 	//Check if all inhabitants are still inside
@@ -133,7 +133,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/list/bad_items = list()
 	var/plural_items = "item"
 	var/skip = FALSE //If item is in unhighlighted_items
-	for(var/obj/item/T in mob_occupant.GetAllContents())
+	for(var/obj/item/T in mob_occupant.get_all_contents())
 		for(var/B in highlighted_items) //No nasty items in my cryo storage
 			if(istype(T, B))
 				for(var/W in unhighlighted_items) //Yes nasty items in my cryo storage

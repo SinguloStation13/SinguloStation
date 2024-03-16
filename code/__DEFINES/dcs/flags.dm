@@ -22,8 +22,6 @@
 /// Causes all detach arguments to be passed to detach instead of only being used to identify the element
 /// When this is used your Detach proc should have the same signature as your Attach proc
 #define ELEMENT_COMPLEX_DETACH (1 << 2)
-/// For machines and structures that should not break into parts, eg, holodeck stuff
-#define NODECONSTRUCT_1	(1<<7)
 /**
  * Elements with this flag will have their datum lists arguments compared as is,
  * without the contents being sorted alpha-numerically first.

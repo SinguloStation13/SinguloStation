@@ -445,6 +445,19 @@
 		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
 	return S
 
+///Allows us to set a permanent sleep on a player (use with caution and remember to unset it with SetSleeping() after the effect is over)
+/mob/living/proc/PermaSleeping()
+	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, -1) & COMPONENT_NO_STUN)
+		return
+	if(status_flags & GODMODE)
+		return
+	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
+	if(S)
+		S.duration = -1
+	else
+		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, -1)
+	return S
+
 /////////////////////////////////// SSD SLEEPING ////////////////////////////////////
 // Puts you to sleep with a status effect distinct from normal sleeping to avoid collision
 
