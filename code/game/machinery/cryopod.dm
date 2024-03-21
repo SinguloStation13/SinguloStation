@@ -341,18 +341,18 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	SSjob.latejoin_trackers -= src
 	. = ..()
 
-/obj/machinery/cryopod/close_machine(atom/movable/target, density_to_set = TRUE, mob/user, exiting = FALSE)
+/obj/machinery/cryopod/close_machine(mob/living/carbon/target, density_to_set = TRUE, exiting = FALSE)
 	active = !exiting //If we exit, don't immediately try to put us into cryo thanks.
 	if(!check_control_computer(TRUE)) //Unusable control computer
 		return
-	if((isnull(user) || istype(user)) && state_open && !panel_open)
-		user.drop_all_held_items()
-		..(user)
-		if(exiting && istype(user, /mob/living))
-			var/mob/living/L = user
+	if((isnull(target) || istype(target)) && state_open && !panel_open)
+		target.drop_all_held_items()
+		..(target)
+		if(exiting && istype(target, /mob/living))
+			var/mob/living/L = target
 			L.remove_status_effect(STATUS_EFFECT_CRYOPROTECTION)
 			icon_state = "cryopod"
-			say("Cryogenic revival of [user.real_name] successful. Have a pleasant and productive day!")
+			say("Cryogenic revival of [target.real_name] successful. Have a pleasant and productive day!")
 			return
 		var/mob/living/mob_occupant = occupant
 		if(mob_occupant && mob_occupant.stat != DEAD)
