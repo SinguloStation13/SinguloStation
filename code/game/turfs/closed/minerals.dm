@@ -427,7 +427,7 @@
 		/obj/item/stack/ore/uranium = 35,
 	)
 
-//	</Xyraeon 9b>
+// </Xyraeon 9b>
 
 //extremely low chance of rare ores, meant mostly for populating stations with large amounts of asteroid
 /turf/closed/mineral/random/stationside
