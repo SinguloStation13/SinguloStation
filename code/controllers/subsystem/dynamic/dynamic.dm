@@ -14,7 +14,7 @@ GLOBAL_VAR_INIT(dynamic_stacking_limit, 90)
 // List of forced roundstart rulesets.
 GLOBAL_LIST_EMPTY(dynamic_forced_roundstart_ruleset)
 // Forced threat level, setting this to zero or higher forces the roundstart threat to the value.
-GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
+GLOBAL_VAR_INIT(dynamic_forced_threat_level, 0)
 /// Modify the threat level for station traits before dynamic can be Initialized. List(instance = threat_reduction)
 GLOBAL_LIST_EMPTY(dynamic_station_traits)
 /// Rulesets which have been forcibly enabled or disabled
@@ -145,7 +145,7 @@ SUBSYSTEM_DEF(dynamic)
 	var/waittime_h = 1800
 
 	/// A number between 0 and 100. The maximum amount of threat allowed to generate.
-	var/max_threat_level = 0
+	var/max_threat_level = 100
 
 	/// The extra chance multiplier that a heavy impact midround ruleset will run next time.
 	/// For example, if this is set to 50, then the next heavy roll will be about 50% more likely to happen.
