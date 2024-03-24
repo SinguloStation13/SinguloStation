@@ -283,6 +283,8 @@
 	name = "Icemoon Underground"
 	area_flags = UNIQUE_AREA
 
+/**********************Xyraeon Areas**************************/
+
 /area/xyraeon
 	icon = 'icons/area/areas_station.dmi'
 	icon_state = "mining"
@@ -319,3 +321,12 @@
 	area_flags = UNIQUE_AREA | FLORA_ALLOWED
 	min_ambience_cooldown = 70 SECONDS
 	max_ambience_cooldown = 220 SECONDS
+
+/area/mine/xyraeon
+	name = "Xyraeon Base"
+
+/area/mine/xyraeon/engineering
+	name = "Space Russian Engineering Outpost"
+
+/area/mine/xyraeon/delivery
+	name = "Cargo Delivery Area"
