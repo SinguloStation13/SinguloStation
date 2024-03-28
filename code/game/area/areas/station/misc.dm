@@ -36,3 +36,4 @@
 /area/station/sss_pioneer
 	name = "\improper SSS Pioneer"
 	icon_state = "podbay"
+	area_flags = EVENT_PROTECTED

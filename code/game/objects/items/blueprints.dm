@@ -218,6 +218,13 @@
 	fluffnotice = "In memory of the Liberator's brother, Delaminator, and his Scarlet Macaw-iathan, from which this artifact was stolen."
 	new_area_type = /area/golem
 
+/obj/item/areaeditor/blueprints/generic
+	name = "base schematics"
+	desc = "A document containing the fundamentals required to configure a habitable, powered base."
+	icon = 'icons/obj/scrolls.dmi'
+	icon_state = "blueprints"
+	fluffnotice = "Keep this around, it's useful!"
+
 /proc/rename_area(a, new_name)
 	var/area/A = get_area(a)
 	var/prevname = "[A.name]"
