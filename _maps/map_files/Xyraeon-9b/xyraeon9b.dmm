@@ -2055,13 +2055,7 @@
 "QM" = (
 /obj/effect/turf_decal/lunar_sand/plating,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/gps/computer{
-	icon = 'icons/obj/machines/telecomms.dmi';
-	icon_state = "relay";
-	pixel_y = 0;
-	gpstag = "Abandoned Cargo Pad";
-	name = "locator tower"
-	},
+/obj/item/gps/computer/locator_tower,
 /turf/open/floor/plating/airless{
 	planetary_atmos = 1
 	},
@@ -185159,7 +185153,7 @@ eY
 Yy
 Rd
 Rd
-Rd
+Xb
 nO
 UX
 xQ
@@ -185416,7 +185410,7 @@ uO
 Yy
 Rd
 Rd
-Rd
+Xb
 nO
 kX
 oF
