@@ -669,7 +669,7 @@
 /area/station/sss_pioneer)
 "oB" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/glass/reinforced/airless,
+/turf/open/floor/glass/reinforced,
 /area/mine/xyraeon/engineering)
 "oF" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1103,7 +1103,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/station/sss_pioneer)
 "wY" = (
-/obj/structure/ore_vent/random,
+/obj/structure/ore_vent/xyraeon,
 /turf/open/misc/asteroid/moon/xyraeon,
 /area/xyraeon/surface)
 "xa" = (
@@ -2070,9 +2070,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/iron/dark,
 /area/station/sss_pioneer)
-"Rd" = (
-/turf/open/openspace/xyraeon,
-/area/mine/xyraeon/engineering)
 "Rg" = (
 /obj/structure/rack,
 /obj/item/pickaxe,
@@ -2132,7 +2129,7 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/mine/xyraeon/engineering)
 "Sd" = (
-/obj/structure/ore_vent/random,
+/obj/structure/ore_vent/xyraeon,
 /turf/open/misc/asteroid/moon/xyraeon,
 /area/xyraeon/underground)
 "Sj" = (
@@ -185151,8 +185148,8 @@ Yy
 jU
 eY
 Yy
-Rd
-Rd
+Xb
+Xb
 Xb
 nO
 UX
@@ -185408,8 +185405,8 @@ cK
 xQ
 uO
 Yy
-Rd
-Rd
+Xb
+Xb
 Xb
 nO
 kX
