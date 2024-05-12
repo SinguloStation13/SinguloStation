@@ -406,7 +406,7 @@
 /obj/structure/ore_vent/xyraeon
 	unique_vent = TRUE
 
-/obj/structure/ore_vent/xyraeon/Initialize()
+/obj/structure/ore_vent/xyraeon/Initialize(mapload)
 	. = ..()
 	var/string_boulder_size = pick_weight(ore_vent_options)
 	generate_mineral_breakdown()
