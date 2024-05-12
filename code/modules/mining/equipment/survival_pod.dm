@@ -212,6 +212,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/door/window/survival_pod/left, 0)
 	density = TRUE
 	pixel_y = -32
 
+//Added for SinguloStation
 /obj/item/gps/computer/locator_tower
 	name = "locator tower"
 	icon = 'icons/obj/mining_zones/pod_computer.dmi'
