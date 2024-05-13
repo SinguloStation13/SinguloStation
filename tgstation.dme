@@ -4837,7 +4837,6 @@
 #include "code\modules\mob\living\carbon\init_signals.dm"
 #include "code\modules\mob\living\carbon\inventory.dm"
 #include "code\modules\mob\living\carbon\life.dm"
-#include "code\modules\mob\living\carbon\logout.dm"
 #include "code\modules\mob\living\carbon\skillchip.dm"
 #include "code\modules\mob\living\carbon\status_procs.dm"
 #include "code\modules\mob\living\carbon\alien\alien.dm"
