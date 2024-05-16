@@ -1,0 +1,7 @@
+author: "Terra1, KubeRoot, TheOneAndMightyRed, Urumasi, MaltVinegar, tgstation devs (tralezab), WhiteSands devs (AsciiSquid, MarkSuckerberg, Superyodeler)"
+delete-after: True
+changes:
+  - rscadd: "Cryogenics code."
+  - rscadd: "Printable protolathes and techfabs."
+  - rscadd: "Xyraeon-9b."
+  - config: "Configuration adjusted for SinguloStation."
