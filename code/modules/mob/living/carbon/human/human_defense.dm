@@ -270,6 +270,8 @@
 		apply_damage(damage, BRUTE, affecting, armor_block)
 
 /mob/living/carbon/human/ex_act(severity, target, origin)
+	if(status_flags & GODMODE) // SinguloStation13 Edit (Cryogenic freezers change - Explosion proof if Godmode is enabled)
+		return
 	if(HAS_TRAIT(src, TRAIT_BOMBIMMUNE))
 		return FALSE
 

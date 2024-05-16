@@ -1,3 +1,6 @@
+#define STATUS_EFFECT_CRYOPROTECTION /datum/status_effect/cryo_protection //Godmode, purges all reagents in your body
+
+#define STATUS_EFFECT_CRYOSLEEPING /datum/status_effect/incapacitating/cryosleeping //the affected is asleep in cryogenic storage
 ///if it allows multiple instances of the effect
 #define STATUS_EFFECT_MULTIPLE 0
 ///if it allows only one, preventing new instances

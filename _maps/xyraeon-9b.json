@@ -1,0 +1,62 @@
+{
+	"version": 1,
+	"map_name": "Xyraeon-9b",
+	"map_path": "map_files/Xyraeon-9b",
+	"map_file": "xyraeon9b.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_box",
+		"emergency": "emergency_box"
+	},
+	"ignored_unit_tests": [
+		"/datum/unit_test/job_roundstart_spawnpoints",
+		"/datum/unit_test/required_map_items",
+		"/datum/unit_test/breath/breath_sanity_ashwalker",
+		"/datum/unit_test/lungs/lungs_sanity_ashwalker",
+		"/datum/unit_test/spy_bounty",
+		"/datum/unit_test/space_dragon_expiration",
+		"/datum/unit_test/atmospherics_sanity"
+	],
+	"traits": [
+		{
+			"Up": true,
+			"Mining": true,
+			"Gravity": true,
+			"Baseturf": "/turf/open/misc/asteroid/moon/xyraeon",
+			"Linkage": null
+		},
+		{
+			"Up": true,
+			"Down": true,
+			"Mining": true,
+			"Gravity": true,
+			"Baseturf": "/turf/open/openspace/xyraeon",
+			"Linkage": null
+		},
+		{
+			"Up": true,
+			"Down": true,
+			"Mining": true,
+			"Gravity": true,
+			"Baseturf": "/turf/open/openspace/xyraeon",
+			"Linkage": null
+		},
+		{
+			"Down": true,
+			"Mining": true,
+			"Gravity": true,
+			"Baseturf": "/turf/open/openspace/xyraeon",
+			"Linkage": null
+		}
+	],
+	"minetype": "none",
+	"job_changes": {
+		"Captain": {
+			"special_charter": "moon"
+		}
+	}
+}

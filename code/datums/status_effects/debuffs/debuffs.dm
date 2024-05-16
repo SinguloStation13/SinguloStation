@@ -1057,6 +1057,27 @@
 	UnregisterSignal(owner, COMSIG_ATOM_UPDATE_OVERLAYS)
 	owner.update_icon()
 
+//CRYO SLEEPING
+/datum/status_effect/incapacitating/cryosleeping
+	id = "cryosleeping"
+	alert_type = /atom/movable/screen/alert/status_effect/cryosleep
+	needs_update_stat = TRUE
+
+/datum/status_effect/incapacitating/cryosleeping/on_apply()
+	. = ..()
+	if(!.)
+		return
+	ADD_TRAIT(owner, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(id))
+
+/datum/status_effect/incapacitating/cryosleeping/on_remove()
+	REMOVE_TRAIT(owner, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(id))
+	return ..()
+
+/atom/movable/screen/alert/status_effect/cryosleep
+	name = "Cryogenic sleep"
+	desc = "You are in cryogenic sleep. Nothing can harm you here."
+	icon_state = "asleep"
+
 #undef HEALING_SLEEP_DEFAULT
 #undef HEALING_SLEEP_ORGAN_MULTIPLIER
 #undef SLEEP_QUALITY_WORKOUT_MULTIPLER

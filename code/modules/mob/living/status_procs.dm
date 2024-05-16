@@ -1,4 +1,3 @@
-
 /**
  * Checks if we have stun immunity. Godmode always passes this check.
  *
@@ -28,6 +27,34 @@
 		return FALSE
 
 	return TRUE
+
+/////////////////////////////////// CRYO SLEEPING ////////////////////////////////////
+// Puts you to sleep without the snoring/healing part of sleeping
+
+/mob/living/proc/IsCryoSleeping() //If we're asleep in cryo
+	return has_status_effect(STATUS_EFFECT_CRYOSLEEPING)
+
+/mob/living/proc/SetCryoSleeping(amount) //Sets remaining duration
+	SEND_SIGNAL(src, COMSIG_LIVING_STATUS_CRYOSLEEP, amount)
+	var/datum/status_effect/incapacitating/cryosleeping/S = IsCryoSleeping()
+	if(amount <= 0)
+		if(S)
+			qdel(S)
+	else if(S)
+		S.duration = world.time + amount
+	else
+		S = apply_status_effect(STATUS_EFFECT_CRYOSLEEPING, amount)
+	return S
+
+///Allows us to set a permanent cryo sleep on a player (use with caution and remember to unset it with SetCryoSleeping() after the effect is over)
+/mob/living/proc/PermaCryoSleeping()
+	SEND_SIGNAL(src, COMSIG_LIVING_STATUS_CRYOSLEEP, -1)
+	var/datum/status_effect/incapacitating/cryosleeping/S = IsCryoSleeping()
+	if(S)
+		S.duration = -1
+	else
+		S = apply_status_effect(STATUS_EFFECT_CRYOSLEEPING, -1)
+	return S
 
 /* STUN */
 /mob/living/proc/IsStun() //If we're stunned
@@ -431,6 +458,21 @@
 		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, -1)
 	return S
 
+/////////////////////////////////// SSD SLEEPING ////////////////////////////////////
+// Puts you to sleep with a status effect distinct from normal sleeping to avoid collision
+
+/mob/living/proc/AdjustCryoSleeping(amount) //Adds to remaining duration
+	if(SEND_SIGNAL(src, COMSIG_LIVING_STATUS_SLEEP, amount) & COMPONENT_NO_STUN)
+		return
+	if(status_flags & GODMODE)
+		return
+	var/datum/status_effect/incapacitating/sleeping/S = IsSleeping()
+	if(S)
+		S.duration += amount
+	else if(amount > 0)
+		S = apply_status_effect(/datum/status_effect/incapacitating/sleeping, amount)
+	return S
+
 ///////////////////////// CLEAR STATUS /////////////////////////
 
 /mob/living/proc/adjust_status_effects_on_shake_up()
@@ -440,6 +482,7 @@
 	AdjustSleeping(-100)
 	AdjustParalyzed(-60)
 	AdjustImmobilized(-60)
+	AdjustCryoSleeping(-100)
 
 ///////////////////////////////// FROZEN /////////////////////////////////////
 

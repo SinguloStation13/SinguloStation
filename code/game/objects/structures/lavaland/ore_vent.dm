@@ -402,6 +402,27 @@
 		/datum/material/glass = 50,
 	)
 
+//SinguloStation 13
+/obj/structure/ore_vent/xyraeon
+	unique_vent = TRUE
+
+/obj/structure/ore_vent/xyraeon/Initialize(mapload)
+	. = ..()
+	var/string_boulder_size = pick_weight(ore_vent_options)
+	generate_mineral_breakdown()
+	generate_description()
+	artifact_chance = rand(0, MAX_ARTIFACT_ROLL_CHANCE)
+	switch(string_boulder_size)
+		if(LARGE_VENT_TYPE)
+			boulder_size = BOULDER_SIZE_LARGE
+		if(MEDIUM_VENT_TYPE)
+			boulder_size = BOULDER_SIZE_MEDIUM
+		if(SMALL_VENT_TYPE)
+			boulder_size = BOULDER_SIZE_SMALL
+		else
+			boulder_size = BOULDER_SIZE_SMALL //Might as well set a default value
+			name = initial(name)
+
 /obj/structure/ore_vent/random
 
 /obj/structure/ore_vent/random/Initialize(mapload)

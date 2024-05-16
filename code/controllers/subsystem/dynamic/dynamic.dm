@@ -14,7 +14,7 @@ GLOBAL_VAR_INIT(dynamic_stacking_limit, 90)
 // List of forced roundstart rulesets.
 GLOBAL_LIST_EMPTY(dynamic_forced_roundstart_ruleset)
 // Forced threat level, setting this to zero or higher forces the roundstart threat to the value.
-GLOBAL_VAR_INIT(dynamic_forced_threat_level, -1)
+GLOBAL_VAR_INIT(dynamic_forced_threat_level, 0)
 /// Modify the threat level for station traits before dynamic can be Initialized. List(instance = threat_reduction)
 GLOBAL_LIST_EMPTY(dynamic_station_traits)
 /// Rulesets which have been forcibly enabled or disabled

@@ -130,6 +130,10 @@
 	name = "sturdy holofirelock"
 	max_integrity = 150
 
+/obj/structure/holosign/barrier/atmos/indestructible
+	name = "indestructible holofirelock"
+	resistance_flags = FIRE_PROOF | FREEZE_PROOF | INDESTRUCTIBLE | UNACIDABLE | LAVA_PROOF
+
 /obj/structure/holosign/barrier/atmos/tram
 	name = "tram atmos barrier"
 	max_integrity = 150

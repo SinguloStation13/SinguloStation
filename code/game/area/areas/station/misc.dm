@@ -32,3 +32,8 @@
 	ambience_index = AMBIENCE_MINING
 	area_flags = UNIQUE_AREA
 	outdoors = TRUE
+
+/area/station/sss_pioneer
+	name = "\improper SSS Pioneer"
+	icon_state = "podbay"
+	area_flags = EVENT_PROTECTED
